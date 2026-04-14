@@ -17,11 +17,11 @@ match codigo_estado:
     case 1:
         imposto = 35/100
     case 2:
-        imposto = 35/100
+        imposto = 25/100
     case 3:
-        imposto = 35/100
+        imposto = 15/100
     case 4:
-        imposto = 35/100
+        imposto = 5/100
     case 5:
         imposto = "Insento"
 valor_total = perco_carga+perco_carga*imposto
