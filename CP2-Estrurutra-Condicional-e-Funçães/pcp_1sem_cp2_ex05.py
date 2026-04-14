@@ -1,5 +1,5 @@
 def pode_aprovar(idade, renda, valor):
-    return idade > 18 and valor <= 20 * renda
+    return idade >= 18 and valor <= 20 * renda
 
 
 def definir_taxa(parcelas):
