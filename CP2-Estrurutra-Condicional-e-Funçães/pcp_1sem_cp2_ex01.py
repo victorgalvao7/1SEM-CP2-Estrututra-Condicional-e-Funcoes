@@ -4,21 +4,25 @@
 # •o preço da carga do caminhão•valor do imposto que écobrado com base no preço da carga e do estado de origem
 # •o valor total transportado pelo caminhão (carga + impostos)Utilize as tabelas abaixo:Obs.: considere que o usuário irá digitar tudo corretamente.
 codigo_estado = int(input("Qual codigo do estado: "))
-peso = float(input("Qual o pesso da carga em toneladas: "))
-if peso >= 10 and peso <= 20:
-    perco = peso * 100 * 1000
-elif peso >= 21 and peso <= 30:
-    perco = peso * 250 * 1000
-elif peso >= 31 and peso <= 40:
-    perco = peso * 340 * 1000
-if codigo_estado == 1:
-    peso_com_imposto = perco *135
-elif codigo_estado == 2:
-    peso_com_imposto = perco *125
-elif codigo_estado == 3:
-    peso_com_imposto = perco *115
-elif codigo_estado == 4:
-    peso_com_imposto = perco *105
-elif codigo_estado == 5:
-    peso_com_imposto = perco 
-print(f"O peso da carga do caminhao em quilos é {peso*1000}kg \nOperço da carga foi de {perco:.2f}\n O valor do imposto cobrado foi de {int((peso_com_imposto-peso)/peso*100)}% ou R${peso_com_imposto-perco:.2f} \nO valor total foi de {peso_com_imposto}")
+peso_em_toneladas = float(input("Qual o peso da carga em toneladas: "))
+codigo_carga = int(input("Qual o código da carga: "))
+peso_em_kg = peso_em_toneladas * 1000
+if codigo_carga >= 10 and codigo_estado <=20:
+    perco_carga = 100*peso_em_kg
+elif codigo_carga >= 21 and codigo_estado <=30:
+    perco_carga = 250*peso_em_kg
+elif codigo_carga >= 31 and codigo_estado <=40:
+    perco_carga = 340*peso_em_kg
+match codigo_estado:
+    case 1:
+        imposto = 35/100
+    case 2:
+        imposto = 35/100
+    case 3:
+        imposto = 35/100
+    case 4:
+        imposto = 35/100
+    case 5:
+        imposto = "Insento"
+valor_total = perco_carga+perco_carga*imposto
+print(f"O valor total da carga foi de R${valor_total:.2f}")
