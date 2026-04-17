@@ -10,17 +10,19 @@
 l1 = int(input("Digite o primeiro lado: "))
 l2 = int(input("Digite o segundo lado: "))
 l3 = int(input("Digite o terceiro lado: "))
-lados = [l1,l2,l3]
-ordenado = sorted(lados)
-if ordenado[1] >= (ordenado[2]+ordenado[3]):
-    print("NÃO FORMA TRIANGULO")
-elif ordenado[3] ** 2 == (ordenado[1]**2 + ordenado[2]**2):
-    print("TRIANGULO RETANGULO")
-elif ordenado[3] ** 2 > (ordenado[2]**2 + ordenado[1]**2):
-    print("TRIANGULO OBTUSANGULO")
-elif ordenado[3] ** 2 < (ordenado[2]**2 + ordenado[1]**2):
-    print("TRIANGULO ACUTANGULO")
-elif ordenado[3] == ordenado [2] and ordenado[3] == ordenado[1]:
-    print("TRIANGULO EQUILATERO")
-elif ordenado[3] == ordenado [2] or ordenado[3] == ordenado[1] or ordenado[2] == ordenado[1]:
-    print("TRIANGULO ISOSCELES")
+lados = [l1, l2, l3]
+ordenado = sorted(lados, reverse=True)
+A, B, C = ordenado
+if A >= B + C:
+    print("NAO FORMA TRIANGULO")
+else:
+    if A**2 == B**2 + C**2:
+        print("TRIANGULO RETANGULO")
+    elif A**2 > B**2 + C**2:
+        print("TRIANGULO OBTUSANGULO")
+    else:
+        print("TRIANGULO ACUTANGULO")
+    if A == B == C:
+        print("TRIANGULO EQUILATERO")
+    elif A == B or A == C or B == C:
+        print("TRIANGULO ISOSCELES")
