@@ -1,5 +1,5 @@
 # 1SEM-CP2-Estrututra-Condicional-e-Funções
-Repositório criado para o desenvolvimento da 1SEM-CP2-Estrututra-Condicional-e-Funções. Alunos:  
+Repositório criado para o desenvolvimento da 1SEM-CP2-Estrututra-Condicional-e-Funções. 
 Victor Vieira Galvão (571483),
 Artur Souza Pereira	(570880),
 Miguel Silverio de Avila (568873),
